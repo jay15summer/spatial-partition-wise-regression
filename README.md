@@ -5,7 +5,7 @@ varying coefficient linear model, i.e., the coefficients of a linear model varie
 among different spatial partitions/regions/segmentations.
 * The algorithm used a greedy merging method to iteratively searching for the best
 pair of neighboring regions to merge until meeting stopping criteria.
-* More details can refer to...
+* More details can refer to ...[to be added].
 * Note: the algorithm borrows ideas from a paper ['Fast Algorithms for Segmented Regression'](http://proceedings.mlr.press/v48/acharya16.pdf) and a GitHub repository [DataDog/piecewise](https://github.com/DataDog/piecewise).
 ## Usage
 * Main function is: ``[partition_all, partiaion_slt] = spatial_partition_reg(S, X, y, h, v, T)``.
@@ -26,6 +26,6 @@ pair of neighboring regions to merge until meeting stopping criteria.
    * partition_slt: a map representing the selected partitions/segmentations (this program used 'map' to represent partitioning).
    The keys of the map can be obtained via ``cell2mat(keys(partition_slt))``.
    The data [S X y] of every partition can be obtained via ``partition_slt(keys).data``.
-   The neighbor of the selected segmentation is ``partition_slt(keys).neighbor``.
+   The neighbor of the selected segmentation is ``partition_slt(keys).neighbor``;
    * two plots: 1. percentage-increase of SSE (metric, sum of squared errors); 2. selected final partitioning.
 * 'example1.m' gives a simulated example implementing the algorithm.
