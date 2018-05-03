@@ -5,7 +5,7 @@ varying coefficient linear model, i.e., the coefficients of a linear model varie
 among different spatial partitions/regions/segmentations.
 * The algorithm used a greedy merging method to iteratively searching for the best
 pair of neighboring regions to merge until meeting stopping criteria.
-* More details can refer to ...[to be added].
+* More details can refer to [post@jay15summer](https://jay15summer.github.io/2018/04/29/spatial-partition-wise-regression.html).
 * Note: the algorithm borrows ideas from a paper ['Fast Algorithms for Segmented Regression'](http://proceedings.mlr.press/v48/acharya16.pdf) and a GitHub repository [DataDog/piecewise](https://github.com/DataDog/piecewise).
 ## Usage
 * Main function is: ``[partition_all, partiaion_slt] = spatial_partition_reg(S, X, y, h, v, T)``.
