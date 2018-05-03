@@ -1,4 +1,4 @@
-# spatial partition-wise/region-wise/segmented/piecewise regression
+# Spatial partition-wise/region-wise/segmented/piecewise regression
 ## Description
 * This program automatically detects the change-points (boundaries) of a spatially
 varying coefficient linear model, i.e., the coefficients of a linear model varies
