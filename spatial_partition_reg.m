@@ -71,7 +71,7 @@ for i = cell2mat(keys(partiaion_slt))
 end
 figure;
 scatter(Seg(:,1), Seg(:,2),3, Seg(:,3),'square','filled'); axis equal; colorbar;
-title('spatial partition/segmentation');
+title('spatial partitioning/segmentation');
 xlabel('S1'); ylabel('S2');
 
 % 5. plot the percentage of increase
@@ -79,7 +79,7 @@ idx_no_empty = find(~cellfun(@isempty, partition_all));
 percent = zeros(length(idx_no_empty)-1, 1);
 for i = 2:length(idx_no_empty)
     increase = partition_all{i}.metric - partition_all{i-1}.metric;
-    percent(i-1) = increase/partition_all{i-1}.metric;
+    percent(i-1) = increase/partition_all{i-1}.metric*100;
 end
 figure;
 plot(percent)
